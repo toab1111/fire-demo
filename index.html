@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="css/skin-red.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
     <link rel="stylesheet" href="css/time-slider.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="center-icons/L.Control.MapCenterCoord.css" />
 </head>
 
 <body class="skin-red">
@@ -165,6 +164,7 @@
     <script src="js/adminlte.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="center-icons/L.Control.MapCenterCoord.js"></script>
     <script>
         var mymap = L.map('mapid').setView([13.8, 100.5], 5);
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -175,6 +175,7 @@
             zoomOffset: -1,
             accessToken: 'your.mapbox.access.token'
         }).addTo(mymap);
+        var positron = new L.Control.MapCenterCoord().addTo(mymap);
     </script>
 
 </body>
