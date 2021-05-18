@@ -4,8 +4,8 @@ var width_window = window.innerWidth
 var startDate = new Date(2018, 11, 1, 0, 0, 0),
     endDate = new Date(2018, 11, 7, 0, 0, 0);
 
-var margin = { top: 0, right: 50, bottom: 0, left: 50 },
-    width = (width_window - margin.left - margin.right) / 1.25,
+var margin = { top: 0, right: 100, bottom: 0, left: 50 },
+    width = (width_window - margin.left - margin.right) / 1.05,
     height = 150 - margin.top - margin.bottom;
 
 var svg = d3.select("#slider")
